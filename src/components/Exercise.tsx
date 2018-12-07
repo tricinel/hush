@@ -15,7 +15,7 @@ const Exercise: React.SFC<RouteComponentProps & IExerciseProps> = ({
   const exercise = exercises.find(({ id }) => id === path);
 
   return (
-    <Card>
+    <Card type="plain">
       <Title>{exercise.title}</Title>
     </Card>
   );

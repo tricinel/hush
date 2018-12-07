@@ -2,6 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Global, css } from '@emotion/core';
 import normalize from 'normalize.css';
+import Home from './components/Home';
+import { Router } from '@reach/router';
 
 const appStyles = `
   body {
@@ -20,11 +22,9 @@ const App = () => (
         ${appStyles}
       `}
     />
-    <h1>Ready to breathe?</h1>
-    <p>
-      Stressed? Tired? Anxious? Try any of our breathing exercises to help you
-      relax and achieve a clear state of mind.
-    </p>
+    <Router>
+      <Home path="/" />
+    </Router>
   </>
 );
 

@@ -26,9 +26,9 @@ class Progress extends Component<IProgressProps, IProgressState> {
 
   public render() {
     const percentage = (this.state.progress / this.props.duration) * 100;
-    const reminaing = this.props.duration - this.state.progress;
+    const remaining = this.props.duration - this.state.progress;
 
-    return this.props.children(percentage, reminaing);
+    return this.props.children(percentage, remaining);
   }
 
   private updateProgress() {

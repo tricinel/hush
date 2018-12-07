@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
+interface ICircle {
+  type?: 'default' | 'complete';
+}
+
 const circle = {
   size: 240,
   colors: {
@@ -18,8 +22,8 @@ const circle = {
 };
 
 const OuterCircle = styled.div`
-  background-color: ${circle.colors.default.bg};
-  border: 2px solid ${circle.colors.default.border};
+  background-color: ${(props: ICircle) => circle.colors[props.type].bg};
+  border: 2px solid ${(props: ICircle) => circle.colors[props.type].border};
   border-radius: 50%;
   display: inline-block;
   margin: 40px;
@@ -29,14 +33,14 @@ const OuterCircle = styled.div`
 `;
 
 const TextCircle = styled.div`
-  color: ${circle.colors.default.text};
+  color: ${(props: ICircle) => circle.colors[props.type].text};
   line-height: ${circle.size}px;
   text-align: center;
 `;
 
-const Circle = ({ children }) => (
-  <OuterCircle>
-    <TextCircle>{children}</TextCircle>
+const Circle: React.SFC<ICircle> = ({ children, type = 'default' }) => (
+  <OuterCircle type={type}>
+    <TextCircle type={type}>{children}</TextCircle>
   </OuterCircle>
 );
 

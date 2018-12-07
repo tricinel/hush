@@ -30,7 +30,7 @@ const Exercise: React.SFC<RouteComponentProps & IExerciseProps> = ({
             )}
             {done && (
               <>
-                <Circle>All done...</Circle>
+                <Circle type="complete">All done...</Circle>
                 <p>
                   <StyledLink to="/">Try another exercise</StyledLink>
                 </p>

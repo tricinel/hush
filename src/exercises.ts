@@ -1,4 +1,6 @@
-const deepCalm = {
+import { IExercise } from './types/Exercise';
+
+const deepCalm: IExercise = {
   id: 'deep-calm',
   title: 'Deep calm',
   description:
@@ -22,7 +24,7 @@ const deepCalm = {
   repeat: 6
 };
 
-const boxBreathing = {
+const boxBreathing: IExercise = {
   id: 'box-breathing',
   title: 'Box breathing',
   description:
@@ -50,7 +52,7 @@ const boxBreathing = {
   repeat: 4
 };
 
-const awake = {
+const awake: IExercise = {
   id: 'awake',
   title: 'Awake',
   description:

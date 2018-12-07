@@ -14,6 +14,12 @@ const appStyles = `
 
 const App = () => (
   <>
+    <Global
+      styles={css`
+        ${normalize}
+        ${appStyles}
+      `}
+    />
     <h1>Ready to breathe?</h1>
     <p>
       Stressed? Tired? Anxious? Try any of our breathing exercises to help you

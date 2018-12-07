@@ -4,7 +4,9 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.html -p 8000",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "predeploy": "yarn build",
+    "deploy": "now dist --local-config=../now.json"
   },
   "dependencies": {
     "@emotion/core": "^10.0.4",

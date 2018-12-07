@@ -27,7 +27,7 @@ const App = () => (
     <Router>
       <Home path="/" exercises={exercises} />
       {exercises.map(exercise => (
-        <Exercise key={exercise.id} path={exercise.id} exercises={exercises} />
+        <Exercise key={exercise.id} path={exercise.id} exercise={exercise} />
       ))}
     </Router>
   </>

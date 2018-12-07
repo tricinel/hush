@@ -9,14 +9,12 @@ import Bar from './Bar';
 import Progress from './Progress';
 
 interface IExerciseProps {
-  exercises: IExercise[];
+  exercise: IExercise;
 }
 
 const Exercise: React.SFC<RouteComponentProps & IExerciseProps> = ({
-  path,
-  exercises
+  exercise
 }) => {
-  const exercise = exercises.find(({ id }) => id === path);
   const totalTime = exercise.breaths.reduce(
     (total, breath) => total + breath.duration * exercise.repeat,
     0

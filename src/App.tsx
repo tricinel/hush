@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { Global, css } from '@emotion/core';
 import normalize from 'normalize.css';
 import Home from './components/Home';
+import Exercise from './components/Exercise';
 import { Router } from '@reach/router';
 import exercises from './exercises';
 
@@ -25,6 +26,9 @@ const App = () => (
     />
     <Router>
       <Home path="/" exercises={exercises} />
+      {exercises.map(exercise => (
+        <Exercise key={exercise.id} path={exercise.id} exercises={exercises} />
+      ))}
     </Router>
   </>
 );

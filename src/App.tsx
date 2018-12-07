@@ -4,6 +4,7 @@ import { Global, css } from '@emotion/core';
 import normalize from 'normalize.css';
 import Home from './components/Home';
 import { Router } from '@reach/router';
+import exercises from './exercises';
 
 const appStyles = `
   body {
@@ -23,7 +24,7 @@ const App = () => (
       `}
     />
     <Router>
-      <Home path="/" />
+      <Home path="/" exercises={exercises} />
     </Router>
   </>
 );

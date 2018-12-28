@@ -91,6 +91,7 @@ All steps are tagged and named appropriately:
 
 - Setup the deploy config files for both netlify and now
 
-**master**
+**Step 10 (step-10-use-hooks)**
 
-- Some bug fixes post-meetup
+- Switch to react-16.7.0-alpha.2
+- Implement custom hooks (Yay!)
